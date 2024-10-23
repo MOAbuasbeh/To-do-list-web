@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+
+}
+
+body {
+    background-image: url("p1.avif");
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(218, 217, 217);
+    background-size: cover; /* Ensures the image covers the whole page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    background-attachment: fixed
+}
+
+.container {
+    height: 500px;
+    width: 600px;
+    border-radius: 5px;
+    background-color: rgb(154, 150, 150);
+    padding: 30px;
+    overflow: auto;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input1 {
+    font-size: 18px;
+    height: 50px;
+    width: 80%;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(252, 252, 252);
+}
+
+.input1::placeholder {
+    color: rgb(136, 130, 130);
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    color: black;
+    height: 40px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+.checkmark {
+    display: none; /* Checkmark hidden by default */
+    color: rgb(10, 237, 10);
+    font-size: 35px;
+    margin-left: 100px;
+    
+}
+
+.Task-completed ~ .checkmark {
+    display: inline; /* Show checkmark when task is completed */
+}
+
+.delete-btn {
+    background-color: rgb(155, 155, 155);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: rgb(233, 12, 12);
+}
+
+.btn1 {
+    height: 50px;
+    width: 18%;
+    border: none;
+    background-color: rgb(207, 206, 206);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn1:hover {
+    background-color: rgb(35, 164, 35);
+}

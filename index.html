@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+     
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="stylesheet" href="./index.css">
+    
+    </head>  
+    <style>
+       .Task-completed{
+        text-decoration: line-through;
+       }
+    </style>     
+  <script>
+       
+   $(document).ready(function(){
+
+    $("#add-btn").click(function(){
+     var inputval = $("#myinput").val().trim();
+     if (inputval === "") {
+      Swal.fire("You must Write Somthing!");
+     }
+     else{
+      var newlist = '<li><span class="task-text">'+ inputval +'</span><span class="checkmark">✓</span><button class="delete-btn">&times;</button>'+'</li>';
+      $("ul").append(newlist);  
+      $("#myinput").val('');   
+     }
+    });
+});
+   
+
+   $(document).on("click",'.task-text',function(){
+      Swal.fire({
+  title: "Good job!",
+  text: "You Completed The Task!",
+  icon: "success"
+});
+      $(this).toggleClass('Task-completed');
+          
+   });
+
+   $(document).on("click" , '.delete-btn' , function(){   
+    $(this).parent().remove();
+   });
+
+
+
+  </script>
+
+  <body>
+          
+    
+   <div class="container">
+     
+       <div class="input-wrapper">
+      <input class="input1" type="text" placeholder="your task..." id="myinput">
+       <button class="btn1" id="add-btn">Add</button> 
+      </div>
+      <ul class="ul-list" id="task-list"></ul>
+     </div>
+     
+  </body>  
+            
+       
+    
+      
+</html>
